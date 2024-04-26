@@ -1,21 +1,47 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
-    <title>Grimware - Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimware - Contact</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Style for the marquee */
+        .marquee {
+            background-color: #f0f0f0; /* Change the background color as needed */
+            padding: 10px 0;
+        }
+    </style>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="about.html">About Us</a>
-            <a href="admin.html">Admin</a>
+        <nav class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <a href="index.html" class="logo">
+                <img src="images/Logo White.png" alt="Grimware Logo" style="height: 50px;">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <a href="cart.html" class="cart-button">
+                <img src="images/Cart Icon.png" alt="Cart" style="height: 30px;"> 
+            </a>
+            <div class="navbar-links" id="navLinks" style="display: none;">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html">Admin</a>
+            </div>
         </nav>
     </header>
+    <!-- Text Marquee -->
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="15"> Coming Soon! ───── FREE DOMESTIC SHIPPING ON ORDERS $150+ *SOME EXCLUSIONS APPLY* </marquee>
+    </div>
     <main>
         <h1>Contact Us</h1>
         <form action="http://localhost:3000/submit-contact" method="post">
@@ -33,5 +59,9 @@
         </form>
     </footer>
     <script src="js/main.js"></script>
+   
+    <footer>
+        <p>&copy; 2023 GRIMWARE. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -3,13 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grimware - About Us</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Style for the marquee */
+        .marquee {
+            background-color: #f0f0f0; /* Change the background color as needed */
+            padding: 10px 0;
+        }
+    </style>
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
+        
         <nav class="navbar" id="navbar">
             <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
             <a href="index.html" class="logo">
@@ -31,9 +39,15 @@
             </div>
         </nav>
     </header>
+    <!-- Text Marquee -->
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="15"> Coming Soon! ───── FREE DOMESTIC SHIPPING ON ORDERS $150+ *SOME EXCLUSIONS APPLY* </marquee>
+    </div>
     <main>
-        <h1>About Grimware</h1>
-        <p>Learn more about our Anime-Inspired Streetwear Brand. Our mission, our vision, and our team.</p>
+        <h1>Our Story</h1>
+        <p>At Grimware, we are a team dedicated to providing unique concept designs. Since our founding in 2023, we have been passionate about pushing the boundaries of creativity and innovation in the design industry.</p>
+        <p>From bold and daring graphics to sleek and minimalist aesthetics, we believe that every design should tell a story and evoke emotion. Our team of talented designers works tirelessly to create products that stand out and make a statement.</p>
+        <p>Whether it's apparel, accessories, or digital artwork, we are committed to delivering designs that inspire and captivate our audience. Join us on our journey as we continue to explore new ideas and push the limits of what's possible in design.</p>
     </main>
     <footer>
         <form action="http://localhost:3000/subscribe" method="post">
@@ -42,19 +56,7 @@
             <button type="submit">Subscribe</button>
         </form>
     </footer>
-    <!-- Cart Drawer -->
-    <div id="cartDrawer" class="cart-drawer">
-        <button onclick="toggleCart()" class="cart-drawer-close-btn">Close</button>
-        <!-- Cart items will be dynamically inserted here -->
-    </div>
 
-    <script>
-        // Cart Drawer Script
-        function toggleCart() {
-            var cartDrawer = document.getElementById('cartDrawer');
-            cartDrawer.classList.toggle('cart-drawer-open');
-        }
-    </script>
     <footer>
         <p>&copy; 2023 GRIMWARE. All rights reserved.</p>
     </footer>

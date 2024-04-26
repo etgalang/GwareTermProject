@@ -115,7 +115,7 @@ footer {
     width: 100%;
 }
 
-}
+
 
 .search-container {
     display: flex;
@@ -220,3 +220,33 @@ footer {
     height: auto; /* Adjust if necessary */
     margin: 0 auto; /* Centers the image if it's not full width */
 }
+
+/* Sticky Footer Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    /* Equal to footer's height */
+    margin-bottom: -50px; 
+  }
+  
+  .wrapper:after {
+    content: "";
+    display: block;
+  }
+  
+  footer, .wrapper:after {
+    /* Footer's height */
+    height: 50px; 
+  }
+  
+  footer {
+    background-color: #333; /* Footer background color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
