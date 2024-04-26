@@ -1,0 +1,93 @@
+<!-- product-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Grimware - Product Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <a href="index.html" class="logo">
+                <img src="images/Logo White.png" alt="Grimware Logo" style="height: 50px;">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <a href="cart.html" class="cart-button">
+                <img src="images/Cart Icon.png" alt="Cart" style="height: 30px;">
+            </a>
+            <div class="navbar-links" id="navLinks" style="display: none;">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Product Name</h1>
+
+
+
+        <!-- Blue Flamed Graphic Tee -->
+        <div class="product">
+            <img src="images/Blue Flamed Graphic Tee with watermark.png" alt="Blue Flamed Graphic Tee">
+            <h2>Blue Flamed Graphic Tee</h2>
+            <p>Black Graphic Tee Design inspired by the Blue Exorcist Animated Show</p>
+            <p>100% Cotton</p>
+            <p class="price">$30.00</p>
+
+            <!-- Size Selector -->
+            <label for="shirt-size">Size:</label>
+            <select id="shirt-size" name="size">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+            </select>
+
+            <!-- Add to Cart Button -->
+            <button id="add-to-cart-btn">Add to Cart</button>
+            <!-- Inline JavaScript -->
+<script>
+    document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+      const size = document.getElementById('shirt-size').value;
+      const cartItem = {
+        productId: 'product1', // Replace with actual product ID
+        size: size,
+        quantity: 1
+      };
+    
+      // Add to localStorage for client-side cart simulation
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(cartItem);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    
+      // Redirect to the cart page
+      window.location.href = 'cart.html';
+    });
+    </script>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/productDetail.js"></script>
+
+    <script src="path/to/add-to-cart.js"></script>
+    <footer>
+        <p>&copy; 2023 GRIMWARE. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

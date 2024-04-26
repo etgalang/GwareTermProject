@@ -1,0 +1,62 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Grimware - About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <a href="index.html" class="logo">
+                <img src="images/Logo White.png" alt="Grimware Logo" style="height: 50px;">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <a href="cart.html" class="cart-button">
+                <img src="images/Cart Icon.png" alt="Cart" style="height: 30px;"> 
+            </a>
+            <div class="navbar-links" id="navLinks" style="display: none;">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>About Grimware</h1>
+        <p>Learn more about our Anime-Inspired Streetwear Brand. Our mission, our vision, and our team.</p>
+    </main>
+    <footer>
+        <form action="http://localhost:3000/subscribe" method="post">
+            <label for="email">Join our Kapamilya:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="cart-drawer">
+        <button onclick="toggleCart()" class="cart-drawer-close-btn">Close</button>
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <script>
+        // Cart Drawer Script
+        function toggleCart() {
+            var cartDrawer = document.getElementById('cartDrawer');
+            cartDrawer.classList.toggle('cart-drawer-open');
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 GRIMWARE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

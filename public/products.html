@@ -1,0 +1,75 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimware - Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="products.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <a href="index.html" class="logo">
+                <img src="images/Logo White.png" alt="Grimware Logo" style="height: 50px;">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <a href="cart.html" class="cart-button">
+                <img src="images/Cart Icon.png" alt="Cart" style="height: 30px;"> 
+            </a>
+            <div class="navbar-links" id="navLinks" style="display: none;">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Products</h1>
+        <div class="product-grid">
+            <!-- Blue Flamed Graphic Tee -->
+            <div class="product">
+                <img src="images/Blue Flamed Graphic Tee with watermark.png" alt="Blue Flamed Graphic Tee">
+                <h2>Blue Flamed Graphic Tee</h2>
+                <p class="price">$30.00</p>
+                <a href="product-detail.html?productId=1" class="product-detail-button">Product Details</a>
+            </div>
+            <!-- Blue Flamed Reversible Satin Lined Bucket Hat -->
+            <div class="product">
+                <img src="images/Blue Flamed Bucket Hat.png" alt="Blue Flamed Reversible Satin Lined Bucket Hat">
+                <h2>Blue Flamed Reversible Satin Lined Bucket Hat</h2>
+                <p class="price">$25.00</p>
+                <a href="product-detail.html?productId=1" class="product-detail-button">Product Details</a>
+            </div>
+            <!-- Additional products can be added here -->
+        </div>
+    </main>
+
+    <footer>
+        <form action="http://localhost:3000/subscribe" method="post">
+            <label for="email">Join our newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function addToCart(productId) {
+            // Implement functionality to add product to cart
+            console.log("Product with ID " + productId + " added to cart.");
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Grimware - Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Admin Dashboard</h1>
+        <div>
+            <h2>Add Product</h2>
+            <!-- Simplified add product form for mock purposes -->
+            <form>
+                <input type="text" placeholder="Product Name" required>
+                <input type="number" placeholder="Price" required>
+                <button type="button">Add Product</button>
+            </form>
+        </div>
+        <div>
+            <h2>Manage Products</h2>
+            <!-- Placeholder for product management -->
+            <p>Product management functionalities would be listed here.</p>
+        </div>
+    </main>
+    <footer>
+        <form action="http://localhost:3000/subscribe" method="post">
+            <label for="email">Join our Kapamilya:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+    <script src="js/admin.js"></script>
+</body>
+</html>

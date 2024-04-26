@@ -1,0 +1,222 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset basic settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Updated to use Inter font */
+    color: #333; /* Default text color, can be changed as needed */
+    background-color: #fff; /* Background color for the whole page */
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.navbar a, .navbar a img {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.navbar .logo img {
+    height: 50px; /* Adjust the size of the logo here */
+}
+
+/* Dropdown menu styling */
+.navbar-links {
+    display: none; /* Initially hide the dropdown links */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    left: 0;
+    top: 60px; /* Adjust this value based on your header's height */
+    z-index: 1001;
+}
+
+.navbar a.icon {
+    display: block;
+    cursor: pointer;
+}
+
+/* Show dropdown when icon is clicked */
+.navbar.responsive .navbar-links {
+    display: flex;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="email"], input[type="text"], textarea, button {
+    margin-top: 10px;
+    padding: 10px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    border: 1px solid #ccc; /* Add border to inputs */
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        position: relative;
+    }
+    .navbar a.icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .navbar.responsive .navbar-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Make dropdown take full width */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.cart-button img {
+    margin-right: 5px;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust 'minmax' values based on desired width */
+    gap: 16px; /* Space between columns and rows */
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ccc; /* Adds a border around each product box */
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light grey background for each product */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space between product boxes */
+}
+
+.product img {
+    max-width: 100%; /* Ensures image is responsive and fits the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 10px; /* Centers image and adds space below */
+    max-height: 150px; /* Limits image height, adjust as needed */
+}
+
+.product h2 {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin: 10px 0 5px; /* Spacing around the product title */
+}
+
+.price {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Color of the price text */
+}
+
+.add-to-cart {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space between the add to cart button and the price */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.product-detail-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; /* Removes underline from the link */
+    transition: background-color 0.3s ease;
+}
+
+.product-detail-button:hover {
+    background-color: #0056b3;
+}
+.banner-splash-image {
+    display: block;
+    width: 100%; /* Adjust if necessary */
+    height: auto; /* Adjust if necessary */
+    margin: 0 auto; /* Centers the image if it's not full width */
+}
